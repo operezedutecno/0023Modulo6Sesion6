@@ -47,7 +47,54 @@ yargs
         const arreglo = JSON.parse(data)
         console.table(arreglo);
     })
-    .command("actualizar", "Comando para actualizar persona")
+    .command("actualizar", "Comando para actualizar persona",
+        {
+            id: {
+                alias: "i",
+                describe: "Id de la persona a modificar",
+                type: "string",
+                demandOption: true
+            },
+            nombre: {
+                alias: "n",
+                describe: "Nombre de la persona a modificar",
+                type: "string",
+                demandOption: false
+            },
+            apellido: {
+                alias: "a",
+                describe: "Apellido de la persona a modificar",
+                type: "string",
+                demandOption: false
+            }
+        },
+        ({ id, nombre, apellido}) => {
+            //Validar que se reciba al menos uno de los 2 campos (nombre,apellido)
+
+            const data = fs.readFileSync("files/personas.txt","utf8")
+            const arreglo = JSON.parse(data)
+
+            const indice = arreglo.findIndex(persona => persona.id == id)
+
+            //Opción 1 para editar
+            arreglo[indice] = { 
+                ...arreglo[indice], 
+                nombre: nombre || arreglo[indice].nombre, 
+                apellido: apellido || arreglo[indice].apellido
+            }
+
+            //Opción 2 para editar
+            // if(nombre !== undefined)
+            //     arreglo[indice].nombre = nombre
+            // if(apellido !== undefined)
+            //     arreglo[indice].apellido = apellido
+
+            const registro = JSON.stringify(arreglo)
+            fs.writeFileSync("files/personas.txt", registro, "utf8")
+            console.log("Persona modificada con éxito");
+            console.table(arreglo[indice]);
+        }
+    )
     .command(
         "eliminar", 
         "Comando para eliminar persona",

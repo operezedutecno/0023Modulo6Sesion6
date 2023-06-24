@@ -1,1 +1,1 @@
-[{"id":"5a1ce74d","rut":"11111111-1","nombre":"Pablo","apellido":"Marmol"},{"id":"19b20f9c","rut":"22222222-2","nombre":"Luis","apellido":"Pérez"},{"id":"5feb9cab","rut":"33333333-3","nombre":"Luisa","apellido":"Gómez"}]
+[{"id":"5a1ce74d","rut":"11111111-1","apellido":"González","nombre":"Pedro"},{"id":"19b20f9c","rut":"22222222-2","nombre":"Luis","apellido":"Pérez"},{"id":"5feb9cab","rut":"33333333-3","nombre":"Luisa","apellido":"Gómez"}]
