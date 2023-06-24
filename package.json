@@ -1,0 +1,24 @@
+{
+  "name": "0023Modulo6Sesion6",
+  "version": "1.0.0",
+  "description": "Comandos con Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/operezedutecno/0023Modulo6Sesion6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/operezedutecno/0023Modulo6Sesion6/issues"
+  },
+  "homepage": "https://github.com/operezedutecno/0023Modulo6Sesion6#readme",
+  "dependencies": {
+    "uuid": "^9.0.0",
+    "yargs": "^17.7.2"
+  }
+}
